@@ -1,0 +1,86 @@
+{
+    "store_action": {
+        "recognition": "TemplateMatch",
+        "template": "shopping\\businessman.png",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "find_goods_upper",
+            "Swipe_list"
+        ]
+    },
+    "find_goods_upper": {
+        "recognition": "OCR",
+        "expected": "誓约书签|神秘奖牌",
+        "action": "Click",
+        "target_offset": [
+            480,
+            25,
+            0,
+            0
+        ],
+        "next": [
+            "buy"
+        ]
+    },
+    "Swipe_list": {
+        "action": "Swipe",
+        "begin": [
+            760,
+            591,
+            1,
+            1
+        ],
+        "end": [
+            760,
+            289,
+            1,
+            1
+        ],
+        "next": [
+            "find_goods_Below",
+            "refresh"
+        ]
+    },
+    "find_goods_Below": {
+        "recognition": "OCR",
+        "expected": "誓约书签|神秘奖牌",
+        "action": "Click",
+        "target_offset": [
+            480,
+            25,
+            0,
+            0
+        ],
+        "next": "buy"
+    },
+    "buy": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            766,
+            472,
+            101,
+            68
+        ],
+        "action": "Click",
+        "next": "refresh",
+        "pre_wait_freezes": 100
+    },
+    "refresh": {
+        "recognition": "OCR",
+        "expected": "立即更新",
+        "action": "Click",
+        "next": "queren"
+    },
+    "queren": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "find_goods_upper",
+            "Swipe_list"
+        ]
+    }
+}

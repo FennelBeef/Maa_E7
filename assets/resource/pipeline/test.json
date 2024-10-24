@@ -1,0 +1,14 @@
+{
+    "a": {
+        "next": [
+            "b"
+        ]
+    },
+    "b": {
+        "recognition": "OCR",
+        "expected": "dadada|qq|存储",
+        "action": "Click",
+        "next": [],
+        "timeout": 1000
+    }
+}
