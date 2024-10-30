@@ -1,17 +1,21 @@
 {
     "store_action": {
-        "recognition": "TemplateMatch",
-        "template": "shopping\\businessman.png",
         "action": "Click",
-        "post_wait_freezes": 100,
+        "target": [
+            541,
+            163,
+            46,
+            36
+        ],
+        "post_wait_freezes": 1000,
         "next": [
-            "find_goods_upper",
-            "Swipe_list"
+            "findUpperItems",
+            "SwipeList"
         ]
     },
-    "find_goods_upper": {
+    "findUpperItems": {
         "recognition": "OCR",
-        "expected": "誓约书签|神秘奖牌",
+        "expected": "誓约书签|神秘奖牌|友情书签",
         "action": "Click",
         "target_offset": [
             480,
@@ -23,7 +27,7 @@
             "buy"
         ]
     },
-    "Swipe_list": {
+    "SwipeList": {
         "action": "Swipe",
         "begin": [
             760,
@@ -38,13 +42,13 @@
             1
         ],
         "next": [
-            "find_goods_Below",
+            "findLowerItems",
             "refresh"
         ]
     },
-    "find_goods_Below": {
+    "findLowerItems": {
         "recognition": "OCR",
-        "expected": "誓约书签|神秘奖牌",
+        "expected": "誓约书签|神秘奖牌|友情书签",
         "action": "Click",
         "target_offset": [
             480,
@@ -52,6 +56,7 @@
             0,
             0
         ],
+        "pre_wait_freezes": 1000,
         "next": "buy"
     },
     "buy": {
@@ -65,22 +70,29 @@
         ],
         "action": "Click",
         "next": "refresh",
-        "pre_wait_freezes": 100
+        "pre_wait_freezes": 500
     },
     "refresh": {
         "recognition": "OCR",
         "expected": "立即更新",
         "action": "Click",
-        "next": "queren"
+        "post_wait_freezes": 500,
+        "next": "Confirm"
     },
-    "queren": {
+    "Confirm": {
         "recognition": "OCR",
         "expected": "确认",
         "action": "Click",
-        "post_wait_freezes": 100,
+        "roi": [
+            372,
+            202,
+            555,
+            300
+        ],
+        "post_wait_freezes": 500,
         "next": [
-            "find_goods_upper",
-            "Swipe_list"
+            "findUpperItems",
+            "SwipeList"
         ]
     }
 }

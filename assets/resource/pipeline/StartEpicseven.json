@@ -1,0 +1,36 @@
+{
+    "StartEpicseven": {
+        "action": "StartApp",
+        "package": "com.zlongame.cn.epicseven",
+        "post_wait_freezes": 10000,
+        "next": [
+            "ClosePop_up"
+        ]
+    },
+    "ClosePop_up": {
+        "recognition": "TemplateMatch",
+        "template": "StartApp\\关闭开始弹窗.png",
+        "roi": [
+            1118,
+            50,
+            48,
+            54
+        ],
+        "action": "Click",
+        "next": [
+            "轻触画面开始"
+        ]
+    },
+    "轻触画面开始": {
+        "recognition": "OCR",
+        "expected": "轻触画面开始",
+        "action": "Click",
+        "target": [
+            491,
+            479,
+            343,
+            129
+        ],
+        "next": []
+    }
+}

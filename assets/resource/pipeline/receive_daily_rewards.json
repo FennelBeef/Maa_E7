@@ -1,0 +1,8 @@
+{
+    "StartReceive": {
+        "recognition": "OCR",
+        "expected": "成就",
+        "action": "Click",
+        "next": []
+    }
+}
