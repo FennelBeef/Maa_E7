@@ -145,7 +145,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MAAxxx-linux-${{ matrix.arch }}
+          name: Maa_E7-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -177,7 +177,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MAAxxx-macos-${{ matrix.arch }}
+          name: Maa_E7-macos-${{ matrix.arch }}
           path: "install"
 
   android:
@@ -210,7 +210,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MAAxxx-android-${{ matrix.arch }}
+          name: Maa_E7-android-${{ matrix.arch }}
           path: "install"
 
   release:

@@ -15,7 +15,7 @@
     },
     "findUpperItems": {
         "recognition": "OCR",
-        "expected": "誓约书签|神秘奖牌|友情书签",
+        "expected": "誓约书签|神秘奖牌",
         "action": "Click",
         "target_offset": [
             480,
@@ -48,7 +48,7 @@
     },
     "findLowerItems": {
         "recognition": "OCR",
-        "expected": "誓约书签|神秘奖牌|友情书签",
+        "expected": "誓约书签|神秘奖牌",
         "action": "Click",
         "target_offset": [
             480,
