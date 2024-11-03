@@ -36,6 +36,14 @@
         {
             "name": "刷商店",
             "entry": "store_action"
+        },
+        {
+            "name": "每日一抽",
+            "entry": "Menu_summon"
+        },
+        {
+            "name": "每日商店领取",
+            "entry": "Menu_Store"
         }
     ],
     "option": {

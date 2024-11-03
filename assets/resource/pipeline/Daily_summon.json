@@ -1,0 +1,88 @@
+{
+    "Menu_summon": {
+        "action": "Click",
+        "target": [
+            1225,
+            17,
+            32,
+            35
+        ],
+        "post_delay": 200,
+        "next": [
+            "Start_Summon"
+        ]
+    },
+    "Start_Summon": {
+        "recognition": "OCR",
+        "expected": "召唤",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_delay": 200,
+        "next": [
+            "SwipeCardPool”"
+        ]
+    },
+    "SwipeCardPool”": {
+        "action": "Swipe",
+        "begin": [
+            1149,
+            656,
+            1,
+            1
+        ],
+        "end": [
+            1146,
+            103,
+            1,
+            1
+        ],
+        "next": [
+            "誓约召唤"
+        ]
+    },
+    "誓约召唤": {
+        "recognition": "OCR",
+        "expected": "誓约召唤",
+        "action": "Click",
+        "roi": [
+            1032,
+            451,
+            244,
+            259
+        ],
+        "next": [
+            "FreeCard"
+        ]
+    },
+    "FreeCard": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "roi": [
+            262,
+            622,
+            248,
+            85
+        ],
+        "next": [
+            "Draw"
+        ]
+    },
+    "Draw": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            386,
+            447,
+            537,
+            135
+        ],
+        "next": []
+    }
+}

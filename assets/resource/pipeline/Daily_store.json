@@ -1,0 +1,154 @@
+{
+    "Menu_Store": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "next": [
+            "Start_claim"
+        ]
+    },
+    "Start_claim": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "next": [
+            "daily_free_energy"
+        ]
+    },
+    "daily_free_energy": {
+        "recognition": "OCR",
+        "expected": "普琳每日免费商品",
+        "action": "Click",
+        "roi": [
+            39,
+            396,
+            978,
+            303
+        ],
+        "next": [
+            "buy_free_energy"
+        ]
+    },
+    "buy_free_energy": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "roi": [
+            571,
+            457,
+            343,
+            100
+        ],
+        "next": [
+            "close_free_energy"
+        ]
+    },
+    "close_free_energy": {
+        "action": "Click",
+        "target": [
+            539,
+            529,
+            175,
+            46
+        ],
+        "next": [
+            "SwipeList_claim"
+        ]
+    },
+    "SwipeList_claim": {
+        "action": "Swipe",
+        "begin": [
+            1155,
+            688,
+            1,
+            1
+        ],
+        "end": [
+            1146,
+            80,
+            1,
+            1
+        ],
+        "next": [
+            "bonds"
+        ]
+    },
+    "bonds": {
+        "recognition": "OCR",
+        "expected": "友情",
+        "action": "Click",
+        "roi": [
+            1039,
+            63,
+            240,
+            649
+        ],
+        "next": [
+            "40_Energy"
+        ]
+    },
+    "40_Energy": {
+        "recognition": "OCR",
+        "expected": "40点行动力",
+        "action": "Click",
+        "target_offset": [
+            290,
+            20,
+            190,
+            60
+        ],
+        "next": [
+            "buy_Energy"
+        ]
+    },
+    "buy_Energy": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "action": "Click",
+        "roi": [
+            395,
+            461,
+            483,
+            94
+        ],
+        "next": [
+            "5_flag"
+        ]
+    },
+    "5_flag": {
+        "recognition": "OCR",
+        "expected": "5面旗帜",
+        "action": "Click",
+        "target_offset": [
+            290,
+            20,
+            190,
+            60
+        ],
+        "next": [
+            "buy_flag"
+        ]
+    },
+    "buy_flag": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "action": "Click",
+        "roi": [
+            395,
+            461,
+            483,
+            94
+        ],
+        "next": []
+    }
+}
