@@ -1,4 +1,9 @@
 {
+    "name": "Maa_E7",
+    "version": "v1.0.7",
+    "url": "https://github.com/FennelBeef/Maa_E7",
+    "custom_title": "Maa_E7",
+    "default_controller": "adb",
     "controller": [
         {
             "name": "安卓端",
@@ -44,13 +49,21 @@
         {
             "name": "每日商店领取",
             "entry": "Menu_Store"
+        },
+        {
+            "name": "领取圣域原石",
+            "entry": "Menu_Sanctuary"
+        },
+        {
+            "name": "每日领取免费宠物",
+            "entry": "Menu_pet"
         }
     ],
     "option": {
-        "任务选项1": {
+        "刷商店": {
             "cases": [
                 {
-                    "name": "文本1",
+                    "name": "测试文本1",
                     "pipeline_override": {
                         "OcrTask": {
                             "text": "文本1"
@@ -58,7 +71,7 @@
                     }
                 },
                 {
-                    "name": "文本2",
+                    "name": "测试文本2",
                     "pipeline_override": {
                         "OcrTask": {
                             "text": "文本2"

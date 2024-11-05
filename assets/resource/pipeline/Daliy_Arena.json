@@ -1,0 +1,110 @@
+{
+    "Menu_arena": {
+        "action": "Click",
+        "target": [
+            1225,
+            17,
+            32,
+            35
+        ],
+        "post_delay": 200,
+        "next": [
+            "Start_arena"
+        ]
+    },
+    "Start_arena": {
+        "recognition": "OCR",
+        "expected": "竞技场",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "next": [
+            "Enter_Arena"
+        ]
+    },
+    "Enter_Arena": {
+        "recognition": "OCR",
+        "expected": "竞技场",
+        "action": "Click",
+        "roi": [
+            207,
+            84,
+            279,
+            133
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "ChooseOpponent"
+        ]
+    },
+    "ChooseOpponent": {
+        "recognition": "ColorMatch",
+        "roi": [
+            534,
+            170,
+            78,
+            363
+        ],
+        "lower": [
+            28,
+            30,
+            32
+        ],
+        "upper": [
+            52,
+            49,
+            44
+        ],
+        "connected": true,
+        "index": 0,
+        "action": "Click",
+        "next": [
+            "Challenge"
+        ]
+    },
+    "Challenge": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "action": "Click",
+        "roi": [
+            483,
+            608,
+            317,
+            106
+        ],
+        "next": [
+            "Quick_Battle"
+        ]
+    },
+    "Quick_Battle": {
+        "recognition": "OCR",
+        "expected": "快速对战",
+        "action": "Click",
+        "roi": [
+            653,
+            604,
+            346,
+            109
+        ],
+        "post_delay": 2000,
+        "next": [
+            "Finish_Battle"
+        ]
+    },
+    "Finish_Battle": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            410,
+            563,
+            476,
+            110
+        ],
+        "next": []
+    }
+}

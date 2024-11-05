@@ -1,0 +1,84 @@
+{
+    "Menu_Sanctuary": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "next": [
+            "Start_Sanctuary"
+        ]
+    },
+    "Start_Sanctuary": {
+        "recognition": "OCR",
+        "expected": "圣域",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "next": [
+            "Heart_of_Elysium"
+        ]
+    },
+    "Heart_of_Elysium": {
+        "recognition": "OCR",
+        "expected": "欧勒毕斯之心",
+        "action": "Click",
+        "roi": [
+            556,
+            167,
+            187,
+            278
+        ],
+        "next": [
+            "get_Heart_of_Elysium"
+        ]
+    },
+    "get_Heart_of_Elysium": {
+        "recognition": "OCR",
+        "expected": "领取生产的奖励",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "reback_Heart_of_Elysium_1",
+            "reback_Heart_of_Elysium_2"
+        ]
+    },
+    "reback_Heart_of_Elysium_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            526,
+            467,
+            240,
+            132
+        ],
+        "next": [
+            "reback_Heart_of_Elysium_2"
+        ]
+    },
+    "reback_Heart_of_Elysium_2": {
+        "recognition": "OCR",
+        "expected": "欧勒毕斯之心",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            244,
+            75
+        ],
+        "next": []
+    }
+}

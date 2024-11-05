@@ -22,6 +22,12 @@
             340,
             646
         ],
+        "target_offset": [
+            0,
+            -50,
+            0,
+            50
+        ],
         "post_delay": 200,
         "next": [
             "SwipeCardPool”"
@@ -41,6 +47,7 @@
             1,
             1
         ],
+        "post_delay": 500,
         "next": [
             "誓约召唤"
         ]
@@ -83,6 +90,28 @@
             537,
             135
         ],
-        "next": []
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                18,
+                608,
+                285,
+                98
+            ]
+        },
+        "next": [
+            "reback_Draw"
+        ]
+    },
+    "reback_Draw": {
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "roi": [
+            20,
+            619,
+            275,
+            93
+        ]
     }
 }

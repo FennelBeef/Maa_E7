@@ -49,17 +49,20 @@
             343,
             100
         ],
+        "post_wait_freezes": 1000,
         "next": [
             "close_free_energy"
         ]
     },
     "close_free_energy": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
         "action": "Click",
-        "target": [
-            539,
-            529,
-            175,
-            46
+        "roi": [
+            472,
+            462,
+            353,
+            130
         ],
         "next": [
             "SwipeList_claim"
