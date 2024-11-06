@@ -31,3 +31,8 @@
 
 更多文档请前往 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 主仓库查看
 
+## 鸣谢
+
+本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)**+**[MFAWPF](https://github.com/SweetSmellFox/MFAWPF)** 强力驱动！
+ 
+

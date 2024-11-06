@@ -108,7 +108,7 @@
             108,
             63
         ],
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": 1500,
         "next": [
             "reback_Penguin_1",
             "reback_Penguin_2"
@@ -152,7 +152,7 @@
             208,
             130
         ],
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": 1500,
         "next": [
             "reback_spring_1",
             "reback_spring_2"
@@ -196,7 +196,7 @@
             174,
             68
         ],
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": 1500,
         "next": [
             "reback_萝卜_1",
             "reback_萝卜_2"
