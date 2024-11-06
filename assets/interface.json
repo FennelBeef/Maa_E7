@@ -51,12 +51,18 @@
             "entry": "Menu_Store"
         },
         {
-            "name": "领取圣域原石",
+            "name": "领取圣域物品",
             "entry": "Menu_Sanctuary"
         },
         {
             "name": "每日领取免费宠物",
             "entry": "Menu_pet"
+        },
+        {
+            "name": "自动竞技场",
+            "entry": "Initial_arena",
+            "repeatable": true,
+            "repeat_count": 10
         }
     ],
     "option": {

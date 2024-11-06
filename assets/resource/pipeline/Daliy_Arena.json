@@ -1,15 +1,8 @@
 {
-    "Menu_arena": {
-        "action": "Click",
-        "target": [
-            1225,
-            17,
-            32,
-            35
-        ],
-        "post_delay": 200,
+    "Initial_arena": {
         "next": [
-            "Start_arena"
+            "Start_arena",
+            "ChooseOpponent"
         ]
     },
     "Start_arena": {
@@ -17,10 +10,10 @@
         "expected": "竞技场",
         "action": "Click",
         "roi": [
-            939,
-            67,
-            340,
-            646
+            807,
+            590,
+            103,
+            126
         ],
         "next": [
             "Enter_Arena"
@@ -38,7 +31,8 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "ChooseOpponent"
+            "ChooseOpponent",
+            "Refresh_Arena"
         ]
     },
     "ChooseOpponent": {
@@ -63,7 +57,37 @@
         "index": 0,
         "action": "Click",
         "next": [
-            "Challenge"
+            "Challenge",
+            "Refresh_Arena"
+        ]
+    },
+    "Refresh_Arena": {
+        "recognition": "TemplateMatch",
+        "template": "Arena\\刷新竞技场.png",
+        "action": "Click",
+        "roi": [
+            792,
+            89,
+            47,
+            51
+        ],
+        "next": [
+            "Confirm_refresh"
+        ]
+    },
+    "Confirm_refresh": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            377,
+            179,
+            516,
+            376
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "ChooseOpponent"
         ]
     },
     "Challenge": {
@@ -71,10 +95,10 @@
         "expected": "挑战",
         "action": "Click",
         "roi": [
-            483,
-            608,
-            317,
-            106
+            607,
+            638,
+            66,
+            44
         ],
         "next": [
             "Quick_Battle"
@@ -90,7 +114,7 @@
             346,
             109
         ],
-        "post_delay": 2000,
+        "post_delay": 4000,
         "next": [
             "Finish_Battle"
         ]
@@ -105,6 +129,7 @@
             476,
             110
         ],
+        "post_wait_freezes": 2000,
         "next": []
     }
 }
