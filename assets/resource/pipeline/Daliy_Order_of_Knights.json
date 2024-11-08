@@ -1,0 +1,145 @@
+{
+    "Menu_order": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "next": [
+            "Start_order"
+        ]
+    },
+    "Start_order": {
+        "recognition": "OCR",
+        "expected": "骑士团",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "close_Sign_in_Bonus",
+            "click_donate"
+        ]
+    },
+    "close_Sign_in_Bonus": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": [
+            "签到"
+        ]
+    },
+    "签到": {
+        "recognition": "OCR",
+        "expected": "签到达成率",
+        "action": "Click",
+        "roi": [
+            788,
+            627,
+            188,
+            74
+        ],
+        "next": [
+            "关闭签到达成率",
+            "click_donate"
+        ]
+    },
+    "关闭签到达成率": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": [
+            "click_donate"
+        ]
+    },
+    "click_donate": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            1005,
+            67,
+            270,
+            649
+        ],
+        "next": [
+            "donate",
+            "courage",
+            "game_over"
+        ]
+    },
+    "donate": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            784,
+            397,
+            199,
+            83
+        ],
+        "next": [
+            "close_donate",
+            "game_over"
+        ]
+    },
+    "close_donate": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": [
+            "courage"
+        ]
+    },
+    "courage": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            779,
+            622,
+            204,
+            76
+        ],
+        "next": [
+            "close_courage",
+            "game_over"
+        ]
+    },
+    "close_courage": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": []
+    }
+}

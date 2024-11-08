@@ -3,6 +3,9 @@
         "next": [
             "Start_arena",
             "ChooseOpponent"
+        ],
+        "interrupt": [
+            "go_home"
         ]
     },
     "Start_arena": {

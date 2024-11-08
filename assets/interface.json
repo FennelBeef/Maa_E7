@@ -39,30 +39,38 @@
             "entry": "StartEpicseven"
         },
         {
-            "name": "刷商店",
-            "entry": "store_action"
+            "name": "每日商店领取",
+            "entry": "Menu_Store"
         },
         {
             "name": "每日一抽",
             "entry": "Menu_summon"
         },
         {
-            "name": "每日商店领取",
-            "entry": "Menu_Store"
+            "name": "每日领取免费宠物",
+            "entry": "Menu_pet"
         },
         {
             "name": "领取圣域物品",
             "entry": "Menu_Sanctuary"
         },
         {
-            "name": "每日领取免费宠物",
-            "entry": "Menu_pet"
-        },
-        {
             "name": "自动竞技场",
             "entry": "Initial_arena",
             "repeatable": true,
             "repeat_count": 10
+        },
+        {
+            "name": "骑士团签到",
+            "entry": "Menu_order"
+        },
+        {
+            "name": "领取每日成就",
+            "entry": "Menu_rewards"
+        },
+        {
+            "name": "刷商店",
+            "entry": "store_action"
         }
     ],
     "option": {

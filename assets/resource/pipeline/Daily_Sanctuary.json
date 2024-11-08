@@ -163,10 +163,10 @@
         "expected": "轻触后关闭",
         "action": "Click",
         "roi": [
-            575,
-            669,
-            139,
-            41
+            551,
+            503,
+            172,
+            84
         ],
         "next": [
             "萝卜"
@@ -199,7 +199,8 @@
         "post_wait_freezes": 1500,
         "next": [
             "reback_萝卜_1",
-            "reback_萝卜_2"
+            "reback_萝卜_2",
+            "game_over"
         ]
     },
     "reback_萝卜_1": {

@@ -7,7 +7,7 @@
             32,
             35
         ],
-        "post_delay": 200,
+        "post_wait_freezes": 500,
         "next": [
             "Start_Summon"
         ]

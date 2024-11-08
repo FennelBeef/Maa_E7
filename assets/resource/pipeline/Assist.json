@@ -1,0 +1,29 @@
+{
+    "go_home": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "next": [
+            "click_home"
+        ]
+    },
+    "click_home": {
+        "recognition": "OCR",
+        "expected": "大厅",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "next": []
+    },
+    "game_over": {
+        "next": []
+    }
+}

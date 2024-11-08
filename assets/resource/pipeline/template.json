@@ -1,0 +1,60 @@
+{
+    "邮件确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            936,
+            628,
+            275,
+            71
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "友情界面轻触后关闭"
+        ]
+    },
+    "友情界面轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "roi": [
+            538,
+            557,
+            224,
+            91
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行1"
+        ]
+    },
+    "重新进行1": {
+        "recognition": "OCR",
+        "expected": "重新进行",
+        "roi": [
+            753,
+            544,
+            267,
+            82
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行2"
+        ]
+    },
+    "重新进行2": {
+        "recognition": "OCR",
+        "expected": "重新进行",
+        "roi": [
+            753,
+            544,
+            267,
+            82
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": []
+    }
+}

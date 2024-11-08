@@ -1,8 +1,57 @@
 {
-    "StartReceive": {
+    "Menu_rewards": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_rewards"
+        ]
+    },
+    "Start_rewards": {
         "recognition": "OCR",
         "expected": "成就",
         "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "三姐妹日记奖励"
+        ]
+    },
+    "三姐妹日记奖励": {
+        "action": "Click",
+        "target": [
+            437,
+            158,
+            51,
+            50
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "close_三姐妹日记奖励",
+            "game_over"
+        ]
+    },
+    "close_三姐妹日记奖励": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            552,
+            538,
+            177,
+            92
+        ],
+        "post_wait_freezes": 1000,
         "next": []
     }
 }
