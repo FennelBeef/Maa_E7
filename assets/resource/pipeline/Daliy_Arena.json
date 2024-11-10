@@ -2,7 +2,7 @@
     "Initial_arena": {
         "next": [
             "Start_arena",
-            "ChooseOpponent"
+            "ChooseOpponent_1"
         ],
         "interrupt": [
             "go_home"
@@ -34,33 +34,53 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "ChooseOpponent",
-            "Refresh_Arena"
+            "ChooseOpponent_1"
         ]
     },
-    "ChooseOpponent": {
-        "recognition": "ColorMatch",
+    "ChooseOpponent_1": {
+        "recognition": "OCR",
+        "expected": "积分",
         "roi": [
-            534,
-            170,
-            78,
-            363
+            319,
+            180,
+            297,
+            89
         ],
-        "lower": [
-            28,
-            30,
-            32
-        ],
-        "upper": [
-            52,
-            49,
-            44
-        ],
-        "connected": true,
-        "index": 0,
         "action": "Click",
         "next": [
             "Challenge",
+            "ChooseOpponent_2",
+            "Refresh_Arena"
+        ]
+    },
+    "ChooseOpponent_2": {
+        "recognition": "OCR",
+        "expected": "积分",
+        "roi": [
+            318,
+            307,
+            276,
+            86
+        ],
+        "action": "Click",
+        "next": [
+            "Challenge",
+            "ChooseOpponent_3"
+        ]
+    },
+    "ChooseOpponent_3": {
+        "recognition": "OCR",
+        "expected": "积分",
+        "roi": [
+            318,
+            430,
+            252,
+            93
+        ],
+        "action": "Click",
+        "next": [
+            "Challenge",
+            "ChooseOpponent_3",
             "Refresh_Arena"
         ]
     },
@@ -90,7 +110,7 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "ChooseOpponent"
+            "ChooseOpponent_1"
         ]
     },
     "Challenge": {
@@ -117,7 +137,8 @@
             346,
             109
         ],
-        "post_delay": 4000,
+        "post_wait_freezes": 3000,
+        "post_delay": 1000,
         "next": [
             "Finish_Battle"
         ]

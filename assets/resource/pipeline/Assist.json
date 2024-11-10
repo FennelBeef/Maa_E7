@@ -21,9 +21,27 @@
             340,
             646
         ],
+        "post_wait_freezes": 2000,
         "next": []
     },
     "game_over": {
         "next": []
+    },
+    "大厅轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click"
+    },
+    "奖励_轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "roi": [
+            529,
+            530,
+            227,
+            103
+        ],
+        "post_wait_freezes": 1000,
+        "action": "Click"
     }
 }

@@ -91,7 +91,7 @@
             135
         ],
         "post_wait_freezes": {
-            "time": 1000,
+            "time": 1500,
             "target": [
                 18,
                 608,
@@ -104,6 +104,84 @@
         ]
     },
     "reback_Draw": {
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "roi": [
+            20,
+            619,
+            275,
+            93
+        ],
+        "next": "免费十连抽"
+    },
+    "免费十连抽": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "roi": [
+            525,
+            627,
+            207,
+            64
+        ],
+        "next": [
+            "确认十连抽"
+        ]
+    },
+    "确认十连抽": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            386,
+            447,
+            537,
+            135
+        ],
+        "post_wait_freezes": {
+            "time": 1500,
+            "target": [
+                1157,
+                2,
+                110,
+                57
+            ]
+        },
+        "next": [
+            "跳过十连抽"
+        ]
+    },
+    "跳过十连抽": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "action": "Click",
+        "roi": [
+            1157,
+            2,
+            110,
+            57
+        ],
+        "next": [
+            "下一页",
+            "reback_10_Draw"
+        ]
+    },
+    "下一页": {
+        "recognition": "OCR",
+        "expected": "下一页",
+        "action": "Click",
+        "roi": [
+            1043,
+            589,
+            234,
+            125
+        ],
+        "next": [
+            "reback_10_Draw"
+        ]
+    },
+    "reback_10_Draw": {
         "recognition": "OCR",
         "expected": "返回",
         "action": "Click",
