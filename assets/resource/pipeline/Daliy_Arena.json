@@ -4,6 +4,7 @@
             "Start_arena",
             "ChooseOpponent_1"
         ],
+        "post_wait_freezes": 500,
         "interrupt": [
             "go_home"
         ]

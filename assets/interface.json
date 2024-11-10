@@ -64,24 +64,41 @@
         {
             "name": "刷商店",
             "entry": "store_action"
+        },
+        {
+            "name": "一键远征",
+            "entry": "Menu_Fight",
+            "repeatable": true,
+            "repeat_count": 20,
+            "option": [
+                "远征目标"
+            ]
         }
     ],
     "option": {
-        "刷商店": {
+        "远征目标": {
             "cases": [
                 {
-                    "name": "测试文本1",
+                    "name": "蓝色古木里奇",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
+                        "蓝色古木里奇": {
+                            "enabled": true
                         }
                     }
                 },
                 {
-                    "name": "测试文本2",
+                    "name": "痛苦的追随者莫洛任",
                     "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+                        "痛苦的追随者莫洛伊": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "绝望的史托玛库期",
+                    "pipeline_override": {
+                        "史托玛库斯": {
+                            "enabled": true
                         }
                     }
                 }
