@@ -30,6 +30,9 @@
         ],
         "post_wait_freezes": 1500,
         "next": [
+            "Start_Expedition"
+        ],
+        "interrupt": [
             "SwipeList_Fight"
         ]
     },
@@ -47,9 +50,7 @@
             1,
             1
         ],
-        "next": [
-            "Start_Expedition"
-        ]
+        "next": []
     },
     "Start_Expedition": {
         "recognition": "OCR",
@@ -132,6 +133,7 @@
         ]
     },
     "公开招募": {
+        "pre_delay": 1000,
         "recognition": "OCR",
         "expected": "公开招募",
         "roi": [
@@ -302,6 +304,7 @@
             102
         ],
         "pre_delay": 500,
+        "post_wait_freezes": 500,
         "next": [
             "返回远征队"
         ]
@@ -316,7 +319,7 @@
             283,
             72
         ],
-        "post_wait_freezes": 1000,
+        "post_delay": 1000,
         "next": []
     }
 }

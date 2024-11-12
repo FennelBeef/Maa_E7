@@ -8,14 +8,6 @@
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
-            }
         }
     ],
     "resource": [
@@ -29,7 +21,10 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "StartEpicseven"
+            "entry": "StartEpicseven",
+            "option": [
+                "渠道选择"
+            ]
         },
         {
             "name": "每日商店领取",
@@ -67,7 +62,7 @@
         },
         {
             "name": "一键远征",
-            "entry": "Menu_Fight",
+            "entry": "Expedition",
             "repeatable": true,
             "repeat_count": 20,
             "option": [
@@ -76,6 +71,26 @@
         }
     ],
     "option": {
+        "渠道选择": {
+            "cases": [
+                {
+                    "name": "国服",
+                    "pipeline_override": {
+                        "StartEpicseven_cn": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "亚服",
+                    "pipeline_override": {
+                        "StartEpicseven_Asia": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
         "远征目标": {
             "cases": [
                 {

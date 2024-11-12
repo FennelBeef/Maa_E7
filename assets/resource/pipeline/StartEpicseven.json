@@ -1,5 +1,21 @@
 {
     "StartEpicseven": {
+        "next": [
+            "StartEpicseven_cn",
+            "StartEpicseven_Asia"
+        ]
+    },
+    "StartEpicseven_Asia": {
+        "enabled": false,
+        "action": "StartApp",
+        "package": "com.stove.epic7.google",
+        "post_wait_freezes": 10000,
+        "next": [
+            "ClosePop_up"
+        ]
+    },
+    "StartEpicseven_cn": {
+        "enabled": false,
         "action": "StartApp",
         "package": "com.zlongame.cn.epicseven",
         "post_wait_freezes": 10000,
