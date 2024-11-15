@@ -7,6 +7,7 @@
             34,
             34
         ],
+        "post_wait_freezes": 500,
         "next": [
             "Start_Sanctuary"
         ]
@@ -21,6 +22,7 @@
             340,
             646
         ],
+        "post_wait_freezes": 500,
         "next": [
             "Heart_of_Elysium"
         ]
@@ -152,7 +154,7 @@
             208,
             130
         ],
-        "post_wait_freezes": 1500,
+        "post_wait_freezes": 2000,
         "next": [
             "reback_spring_1",
             "reback_spring_2"

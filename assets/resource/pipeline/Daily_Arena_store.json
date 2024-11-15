@@ -1,0 +1,103 @@
+{
+    "竞技场商店": {
+        "recognition": "OCR",
+        "expected": "竞技场商店",
+        "roi": [
+            10,
+            496,
+            255,
+            209
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "post_wait_freezes": 1000,
+        "next": [
+            "一般商店_魔罗戈拉",
+            "一般商店_40点行动力",
+            "game_over"
+        ]
+    },
+    "一般商店_魔罗戈拉": {
+        "recognition": "OCR",
+        "expected": "魔罗戈拉",
+        "next": [
+            "一般商店_魔罗戈拉_购买"
+        ]
+    },
+    "一般商店_魔罗戈拉_购买": {
+        "action": "Click",
+        "target": "一般商店_魔罗戈拉",
+        "target_offset": [
+            380,
+            52,
+            -25,
+            6
+        ],
+        "next": [
+            "购买_一般商店_魔罗戈拉",
+            "一般商店_40点行动力"
+        ]
+    },
+    "购买_一般商店_魔罗戈拉": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "action": "Click",
+        "roi": [
+            400,
+            462,
+            483,
+            92
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "一般商店_40点行动力"
+        ]
+    },
+    "一般商店_40点行动力": {
+        "recognition": "OCR",
+        "expected": "40点行动力",
+        "next": [
+            "一般商店_40点行动力_购买"
+        ]
+    },
+    "一般商店_40点行动力_购买": {
+        "action": "Click",
+        "target": "一般商店_40点行动力",
+        "target_offset": [
+            380,
+            52,
+            -25,
+            6
+        ],
+        "next": [
+            "一般商店_40点行动力_最多"
+        ]
+    },
+    "一般商店_40点行动力_最多": {
+        "recognition": "OCR",
+        "expected": "最多",
+        "roi": [
+            321,
+            394,
+            685,
+            90
+        ],
+        "action": "Click",
+        "next": [
+            "购买_一般商店_40点行动力"
+        ]
+    },
+    "购买_一般商店_40点行动力": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "action": "Click",
+        "roi": [
+            378,
+            522,
+            556,
+            88
+        ],
+        "post_wait_freezes": 1000,
+        "next": []
+    }
+}

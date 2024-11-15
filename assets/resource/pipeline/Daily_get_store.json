@@ -22,7 +22,8 @@
             340,
             646
         ],
-        "post_wait_freezes": 1500,
+        "post_wait_freezes": 1000,
+        "post_delay": 1000,
         "next": [
             "daily_free_energy",
             "SwipeList_claim"

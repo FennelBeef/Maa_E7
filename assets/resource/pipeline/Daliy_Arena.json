@@ -1,12 +1,25 @@
 {
     "Initial_arena": {
         "next": [
-            "Start_arena",
-            "ChooseOpponent_1"
+            "ChooseOpponent_1",
+            "Menu_arena"
         ],
         "post_wait_freezes": 500,
         "interrupt": [
             "go_home"
+        ]
+    },
+    "Menu_arena": {
+        "action": "Click",
+        "target": [
+            1225,
+            17,
+            32,
+            35
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_arena"
         ]
     },
     "Start_arena": {
@@ -14,11 +27,12 @@
         "expected": "竞技场",
         "action": "Click",
         "roi": [
-            807,
-            590,
-            103,
-            126
+            939,
+            67,
+            340,
+            646
         ],
+        "post_wait_freezes": 500,
         "next": [
             "Enter_Arena"
         ]
@@ -154,7 +168,7 @@
             476,
             110
         ],
-        "post_wait_freezes": 2000,
+        "post_wait_freezes": 3000,
         "next": []
     }
 }

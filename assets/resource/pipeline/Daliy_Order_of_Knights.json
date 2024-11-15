@@ -26,7 +26,10 @@
         "next": [
             "close_Sign_in_Bonus",
             "签到",
-            "click_donate"
+            "捐赠"
+        ],
+        "interrupt": [
+            "轻触后关闭"
         ]
     },
     "close_Sign_in_Bonus": {
@@ -56,7 +59,7 @@
         "post_wait_freezes": 1000,
         "next": [
             "关闭签到达成率",
-            "click_donate"
+            "捐赠"
         ]
     },
     "关闭签到达成率": {
@@ -71,10 +74,208 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "click_donate"
+            "骑士团出征"
         ]
     },
-    "click_donate": {
+    "骑士团出征": {
+        "recognition": "OCR",
+        "expected": "骑士团出征",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战"
+        ]
+    },
+    "世界首领战": {
+        "recognition": "OCR",
+        "expected": "世界首领战",
+        "action": "Click",
+        "roi": [
+            259,
+            147,
+            723,
+            478
+        ],
+        "post_delay": 500,
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_准备战斗"
+        ]
+    },
+    "世界首领战_准备战斗": {
+        "recognition": "OCR",
+        "expected": "准备战斗",
+        "action": "Click",
+        "roi": [
+            584,
+            621,
+            452,
+            80
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_选择队伍"
+        ]
+    },
+    "世界首领战_选择队伍": {
+        "recognition": "OCR",
+        "expected": "选择队伍",
+        "action": "Click",
+        "roi": [
+            851,
+            565,
+            296,
+            89
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_组成战斗队伍"
+        ]
+    },
+    "世界首领战_组成战斗队伍": {
+        "recognition": "OCR",
+        "expected": "组成战斗队伍",
+        "action": "Click",
+        "roi": [
+            940,
+            615,
+            339,
+            85
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_自动配置"
+        ]
+    },
+    "世界首领战_自动配置": {
+        "recognition": "OCR",
+        "expected": "自动配置",
+        "action": "Click",
+        "roi": [
+            15,
+            611,
+            994,
+            91
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_战斗开始"
+        ]
+    },
+    "世界首领战_战斗开始": {
+        "recognition": "OCR",
+        "expected": "战斗开始",
+        "action": "Click",
+        "roi": [
+            15,
+            611,
+            994,
+            91
+        ],
+        "post_delay": 5000,
+        "post_wait_freezes": 2000,
+        "next": [
+            "世界首领战_跳过"
+        ]
+    },
+    "世界首领战_跳过": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "action": "Click",
+        "roi": [
+            1026,
+            3,
+            248,
+            63
+        ],
+        "post_delay": 9000,
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_全部开启"
+        ]
+    },
+    "世界首领战_全部开启": {
+        "recognition": "OCR",
+        "expected": "全部开启",
+        "action": "Click",
+        "roi": [
+            488,
+            574,
+            302,
+            106
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_全部开启_确认"
+        ]
+    },
+    "世界首领战_全部开启_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            488,
+            574,
+            302,
+            106
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_确认"
+        ]
+    },
+    "世界首领战_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            921,
+            615,
+            344,
+            90
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "返回骑士团"
+        ]
+    },
+    "返回骑士团": {
+        "recognition": "OCR",
+        "expected": "世界首领站",
+        "action": "Click",
+        "roi": [
+            5,
+            0,
+            215,
+            63
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "资源支援"
+        ]
+    },
+    "资源支援": {
+        "recognition": "OCR",
+        "expected": "资源支援",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "捐赠"
+        ]
+    },
+    "捐赠": {
         "recognition": "OCR",
         "expected": "捐赠",
         "action": "Click",
@@ -84,6 +285,7 @@
             270,
             649
         ],
+        "post_wait_freezes": 1500,
         "next": [
             "donate",
             "courage",

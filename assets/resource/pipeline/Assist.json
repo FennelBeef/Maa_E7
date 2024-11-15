@@ -43,5 +43,11 @@
         ],
         "post_wait_freezes": 1000,
         "action": "Click"
+    },
+    "轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "post_wait_freezes": 1000,
+        "action": "Click"
     }
 }
