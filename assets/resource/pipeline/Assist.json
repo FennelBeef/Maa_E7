@@ -49,5 +49,17 @@
         "expected": "轻触后关闭",
         "post_wait_freezes": 1000,
         "action": "Click"
+    },
+    "竞技场_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            521,
+            630,
+            239,
+            65
+        ],
+        "post_wait_freezes": 1000,
+        "action": "Click"
     }
 }
