@@ -20,6 +20,7 @@
         {
             "name": "亚服",
             "path": [
+                "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/asian"
             ]
         }
@@ -27,10 +28,7 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "StartEpicseven",
-            "option": [
-                "渠道选择"
-            ]
+            "entry": "StartEpicseven"
         },
         {
             "name": "每日商店领取",
@@ -86,6 +84,7 @@
                     "expected": "蓝色古木里奇"
                 }
             },
+            "doc": "用于刷取[color:red]蓝色古木里奇[/color]",
             "option": [
                 "目标阶段"
             ]
@@ -103,12 +102,13 @@
                     "expected": "痛苦的追随者莫洛伊"
                 }
             },
+            "doc": "用于刷取[color:red]痛苦的追随者莫洛伊[/color]",
             "option": [
                 "目标阶段"
             ]
         },
         {
-            "name": "一键远征_史托玛库斯",
+            "name": "一键远征_绝望的史托玛库斯",
             "entry": "Expedition",
             "repeatable": true,
             "repeat_count": 20,
@@ -120,32 +120,13 @@
                     "expected": "绝望的史托玛库斯"
                 }
             },
+            "doc": "用于刷取[color:red]绝望的史托玛库斯[/color]",
             "option": [
                 "目标阶段"
             ]
         }
     ],
     "option": {
-        "渠道选择": {
-            "cases": [
-                {
-                    "name": "国服",
-                    "pipeline_override": {
-                        "StartEpicseven_cn": {
-                            "enabled": true
-                        }
-                    }
-                },
-                {
-                    "name": "亚服",
-                    "pipeline_override": {
-                        "StartEpicseven_Asia": {
-                            "enabled": true
-                        }
-                    }
-                }
-            ]
-        },
         "目标阶段": {
             "cases": [
                 {

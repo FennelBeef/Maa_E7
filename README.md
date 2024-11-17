@@ -1,6 +1,10 @@
 # Maa_E7
 
-<img src="https://img.picui.cn/free/2024/11/16/6738386095e02.jpg" alt="伊蕾娜.jpg" style="zoom:70%;" />
+<p align="center">
+  <img alt="LOGO" src="https://img.picui.cn/free/2024/11/16/6738386095e02.jpg" 
+       width="200" height="200" style="border-radius:20px"
+      />
+</p>
 
 基于MaaFramework 的第七史诗小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
@@ -9,20 +13,23 @@
 
 目前已有的功能：
 
-- [x] 启动游戏
-
-- [x] 每日一抽
-- [x] 刷商店（誓约书签|神秘奖牌）
+- [x] 启动游戏（包含国服以及亚服）
+- [x] 每日一抽/十连抽
 - [x] 每日商店领取免费体力，友情兑换体力，友情兑换旗帜
-- [x] 自动竞技场
+- [x] 自动竞技场（支持自定义战斗次数）
+- [x] 每日竞技场商店领取
 - [x] 获取每日宠物
-- [x] 骑士团签到
+- [x] 骑士团签到,世界首领站，每日捐赠
 - [x] 领取每日成就
-- [x] 自动蹭远征
+- [x] 刷神秘商店（誓约书签/神秘奖牌）
+- [x] 自动蹭远征（支持自定义选择BOSS，连战次数）
 
 ## 使用说明
 
-下载地址：https://github.com/FennelBeef/Maa_E7/releases
+- 下载地址：https://github.com/FennelBeef/Maa_E7/releases
+
+- 模拟器分辨率支持：1920*1080
+- 使用时请切换酒馆大厅
 
 ### Windows
 

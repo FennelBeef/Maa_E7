@@ -1,0 +1,77 @@
+{
+    "go_home": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "next": [
+            "click_home"
+        ]
+    },
+    "click_home": {
+        "recognition": "OCR",
+        "expected": "大厅",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 2000,
+        "next": []
+    },
+    "game_over": {
+        "next": []
+    },
+    "大厅轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click"
+    },
+    "奖励_轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "roi": [
+            529,
+            530,
+            227,
+            103
+        ],
+        "post_wait_freezes": 1000,
+        "action": "Click"
+    },
+    "轻触后关闭": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "post_wait_freezes": 1000,
+        "action": "Click"
+    },
+    "竞技场_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            521,
+            630,
+            239,
+            65
+        ],
+        "post_wait_freezes": 1000,
+        "action": "Click"
+    },
+    "购买团员商店物品": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            762,
+            470,
+            107,
+            74
+        ],
+        "action": "Click",
+        "post_delay": 1000
+    }
+}
