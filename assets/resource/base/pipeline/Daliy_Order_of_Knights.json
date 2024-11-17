@@ -59,7 +59,7 @@
         "post_wait_freezes": 1000,
         "next": [
             "关闭签到达成率",
-            "捐赠"
+            "骑士团出征"
         ]
     },
     "关闭签到达成率": {
@@ -135,7 +135,20 @@
         ],
         "post_wait_freezes": 500,
         "next": [
-            "世界首领战_组成战斗队伍"
+            "世界首领战_组成战斗队伍",
+            "点击空白"
+        ]
+    },
+    "点击空白": {
+        "action": "Click",
+        "roi": [
+            31,
+            225,
+            55,
+            133
+        ],
+        "next": [
+            "返回骑士团"
         ]
     },
     "世界首领战_组成战斗队伍": {
@@ -178,8 +191,7 @@
             994,
             91
         ],
-        "post_delay": 5000,
-        "post_wait_freezes": 2000,
+        "post_delay": 10000,
         "next": [
             "世界首领战_跳过"
         ]
@@ -247,7 +259,7 @@
     },
     "返回骑士团": {
         "recognition": "OCR",
-        "expected": "世界首领站",
+        "expected": "世界首领战",
         "action": "Click",
         "roi": [
             5,
@@ -272,7 +284,99 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
+            "资源支援_请求支援"
+        ]
+    },
+    "资源支援_请求支援": {
+        "recognition": "OCR",
+        "expected": "请求支援",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            764,
+            69,
+            229,
+            65
+        ],
+        "next": [
+            "资源支援_请求支援_制作材料",
+            "资源支援_支援"
+        ]
+    },
+    "资源支援_请求支援_制作材料": {
+        "recognition": "OCR",
+        "expected": "制作材料",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            146,
+            124,
+            639,
+            70
+        ],
+        "next": [
+            "资源支援_请求支援_制作材料_魔力龙兽脚爪"
+        ]
+    },
+    "资源支援_请求支援_制作材料_魔力龙兽脚爪": {
+        "recognition": "TemplateMatch",
+        "template": "骑士团\\魔力龙兽脚爪.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            138,
+            194,
+            999,
+            345
+        ],
+        "next": [
+            "资源支援_请求支援_请求支援"
+        ]
+    },
+    "资源支援_请求支援_请求支援": {
+        "recognition": "OCR",
+        "expected": "请求支援",
+        "action": "Click",
+        "roi": [
+            873,
+            540,
+            281,
+            113
+        ],
+        "next": [
+            "资源支援_支援"
+        ]
+    },
+    "资源支援_支援": {
+        "recognition": "OCR",
+        "expected": "魔力龙兽脚爪",
+        "roi": [
+            251,
+            251,
+            742,
+            461
+        ],
+        "next": [
+            "资源支援_支援魔力龙兽脚爪",
             "捐赠"
+        ]
+    },
+    "资源支援_支援魔力龙兽脚爪": {
+        "recognition": "OCR",
+        "expected": "支援2个",
+        "action": "Click",
+        "target": "资源支援_支援",
+        "target_offset": [
+            460,
+            10,
+            0,
+            10
+        ],
+        "next": [
+            "资源支援_支援"
+        ],
+        "interrupt": [
+            "轻触后关闭"
         ]
     },
     "捐赠": {
@@ -348,6 +452,75 @@
             253,
             114
         ],
+        "next": [
+            "团员商店"
+        ]
+    },
+    "团员商店": {
+        "recognition": "OCR",
+        "expected": "团员商店",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "团员商店_物品"
+        ],
+        "interrupt": [
+            "Swipe_团员商店"
+        ]
+    },
+    "团员商店_物品": {
+        "recognition": "OCR",
+        "expected": "魔罗戈拉|装备炼制石箱",
+        "roi": [
+            425,
+            96,
+            276,
+            468
+        ],
+        "next": [
+            "团员商店_物品_购买"
+        ]
+    },
+    "团员商店_物品_购买": {
+        "recognition": "OCR",
+        "roi": "团员商店_物品",
+        "roi_offset": [
+            378,
+            22,
+            71,
+            17
+        ],
+        "expected": "购买",
+        "action": "Click",
+        "next": [
+            "团员商店_物品"
+        ],
+        "interrupt": [
+            "购买团员商店物品",
+            "Swipe_团员商店"
+        ]
+    },
+    "Swipe_团员商店": {
+        "action": "Swipe",
+        "begin": [
+            326,
+            706,
+            1,
+            1
+        ],
+        "end": [
+            326,
+            68,
+            1,
+            1
+        ],
+        "duration": 2000,
         "next": []
     }
 }

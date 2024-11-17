@@ -1,10 +1,6 @@
-
-
-
-
 # Maa_E7
 
-<img src="D:../MaaDemo01\assets\伊蕾娜.jpg" alt="伊蕾娜" style="zoom:%;" border-radius:50px />
+<img src="https://img.picui.cn/free/2024/11/16/6738386095e02.jpg" alt="伊蕾娜.jpg" style="zoom:70%;" />
 
 基于MaaFramework 的第七史诗小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！

@@ -106,14 +106,28 @@
     },
     "40_Energy": {
         "recognition": "OCR",
+        "roi": [
+            543,
+            68,
+            267,
+            651
+        ],
         "expected": "40点行动力",
-        "action": "Click",
-        "target_offset": [
+        "next": [
+            "40_Energy_click"
+        ]
+    },
+    "40_Energy_click": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": "40_Energy",
+        "roi_offset": [
             290,
             20,
-            190,
+            180,
             60
         ],
+        "action": "Click",
         "next": [
             "buy_Energy"
         ]
@@ -135,13 +149,27 @@
     "5_flag": {
         "recognition": "OCR",
         "expected": "5面旗帜",
-        "action": "Click",
-        "target_offset": [
+        "roi": [
+            543,
+            68,
+            267,
+            651
+        ],
+        "next": [
+            "5_flag_click"
+        ]
+    },
+    "5_flag_click": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": "5_flag",
+        "roi_offset": [
             290,
             20,
-            190,
+            180,
             60
         ],
+        "action": "Click",
         "next": [
             "buy_flag"
         ]

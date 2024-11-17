@@ -61,5 +61,17 @@
         ],
         "post_wait_freezes": 1000,
         "action": "Click"
+    },
+    "购买团员商店物品": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            762,
+            470,
+            107,
+            74
+        ],
+        "action": "Click",
+        "post_delay": 1000
     }
 }

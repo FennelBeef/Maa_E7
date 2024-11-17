@@ -1,8 +1,23 @@
 {
     "Expedition": {
         "next": [
-            "公开招募",
+            "识别BOSS",
             "Menu_Fight"
+        ]
+    },
+    "识别BOSS": {
+        "recognition": "OCR",
+        "expected": [
+            ""
+        ],
+        "roi": [
+            107,
+            398,
+            331,
+            42
+        ],
+        "next": [
+            "公开招募"
         ]
     },
     "Menu_Fight": {
@@ -157,10 +172,57 @@
             423,
             55
         ],
-        "post_wait_freezes": 2000,
+        "post_delay": 2000,
         "next": [
-            "入场",
+            "切换boss_3",
+            "切换boss_2",
+            "切换boss_1",
             "game_over"
+        ]
+    },
+    "切换boss_3": {
+        "enabled": true,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_3.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
+        ]
+    },
+    "切换boss_2": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_2.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
+        ]
+    },
+    "切换boss_1": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_1.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
         ]
     },
     "入场": {
@@ -173,43 +235,10 @@
             462
         ],
         "action": "Click",
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 1000,
         "next": [
             "准备战斗"
         ]
-    },
-    "切换boss_3": {
-        "recognition": "TemplateMatch",
-        "template": "Expedition\\boss_3.png",
-        "roi": [
-            575,
-            195,
-            296,
-            60
-        ],
-        "action": "Click"
-    },
-    "切换boss_2": {
-        "recognition": "TemplateMatch",
-        "template": "Expedition\\boss_2.png",
-        "roi": [
-            575,
-            195,
-            296,
-            60
-        ],
-        "action": "Click"
-    },
-    "切换boss_1": {
-        "recognition": "TemplateMatch",
-        "template": "Expedition\\boss_1.png",
-        "roi": [
-            575,
-            195,
-            296,
-            60
-        ],
-        "action": "Click"
     },
     "准备战斗": {
         "recognition": "OCR",
@@ -235,15 +264,7 @@
         ],
         "expected": "战斗开始",
         "action": "Click",
-        "post_wait_freezes": {
-            "time": 1000,
-            "target": [
-                1214,
-                0,
-                59,
-                56
-            ]
-        },
+        "post_delay": 3000,
         "next": [
             "暂停战斗"
         ]

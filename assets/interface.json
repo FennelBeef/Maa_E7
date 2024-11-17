@@ -12,9 +12,15 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "国服",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/resource/base"
+            ]
+        },
+        {
+            "name": "亚服",
+            "path": [
+                "{PROJECT_DIR}/resource/asian"
             ]
         }
     ],
@@ -32,7 +38,10 @@
         },
         {
             "name": "每日一抽",
-            "entry": "Menu_summon"
+            "entry": "Menu_summon",
+            "option": [
+                "是否十连抽"
+            ]
         },
         {
             "name": "每日领取免费宠物",
@@ -62,15 +71,57 @@
         },
         {
             "name": "刷神秘商店",
-            "entry": "store_action"
+            "entry": "Mysterystore_action"
         },
         {
-            "name": "一键远征",
+            "name": "一键远征_蓝色古木里奇",
             "entry": "Expedition",
             "repeatable": true,
             "repeat_count": 20,
+            "pipeline_override": {
+                "蓝色古木里奇": {
+                    "enabled": true
+                },
+                "识别BOSS": {
+                    "expected": "蓝色古木里奇"
+                }
+            },
             "option": [
-                "远征目标"
+                "目标阶段"
+            ]
+        },
+        {
+            "name": "一键远征_痛苦的追随者莫洛伊",
+            "entry": "Expedition",
+            "repeatable": true,
+            "repeat_count": 20,
+            "pipeline_override": {
+                "痛苦的追随者莫洛伊": {
+                    "enabled": true
+                },
+                "识别BOSS": {
+                    "expected": "痛苦的追随者莫洛伊"
+                }
+            },
+            "option": [
+                "目标阶段"
+            ]
+        },
+        {
+            "name": "一键远征_史托玛库斯",
+            "entry": "Expedition",
+            "repeatable": true,
+            "repeat_count": 20,
+            "pipeline_override": {
+                "史托玛库斯": {
+                    "enabled": true
+                },
+                "识别BOSS": {
+                    "expected": "绝望的史托玛库斯"
+                }
+            },
+            "option": [
+                "目标阶段"
             ]
         }
     ],
@@ -95,29 +146,49 @@
                 }
             ]
         },
-        "远征目标": {
+        "目标阶段": {
             "cases": [
                 {
-                    "name": "蓝色古木里奇",
+                    "name": "阶段1",
                     "pipeline_override": {
-                        "蓝色古木里奇": {
+                        "切换boss_1": {
                             "enabled": true
                         }
                     }
                 },
                 {
-                    "name": "痛苦的追随者莫洛任",
+                    "name": "阶段2",
                     "pipeline_override": {
-                        "痛苦的追随者莫洛伊": {
+                        "切换boss_2": {
                             "enabled": true
                         }
                     }
                 },
                 {
-                    "name": "绝望的史托玛库期",
+                    "name": "阶段3",
                     "pipeline_override": {
-                        "史托玛库斯": {
+                        "切换boss_3": {
                             "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "是否十连抽": {
+            "cases": [
+                {
+                    "name": "是",
+                    "pipeline_override": {
+                        "免费十连抽": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "pipeline_override": {
+                        "免费十连抽": {
+                            "enabled": false
                         }
                     }
                 }

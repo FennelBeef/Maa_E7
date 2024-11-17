@@ -1,0 +1,65 @@
+{
+    "StartEpicseven": {
+        "next": [
+            "StartEpicseven_Asia"
+        ]
+    },
+    "StartEpicseven_Asia": {
+        "action": "StartApp",
+        "package": "com.stove.epic7.google",
+        "post_wait_freezes": 10000,
+        "next": [
+            "轻触画面开始"
+        ]
+    },
+    "轻触画面开始": {
+        "recognition": "OCR",
+        "expected": "轻触画面开始",
+        "action": "Click",
+        "target": [
+            491,
+            479,
+            343,
+            129
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "邮件确认",
+            "重新进行"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "邮件确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            936,
+            628,
+            275,
+            71
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行"
+        ]
+    },
+    "重新进行": {
+        "recognition": "OCR",
+        "expected": "重新进行",
+        "roi": [
+            753,
+            544,
+            267,
+            82
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行",
+            "game_over"
+        ]
+    }
+}

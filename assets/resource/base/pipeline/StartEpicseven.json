@@ -1,21 +1,10 @@
 {
     "StartEpicseven": {
         "next": [
-            "StartEpicseven_cn",
-            "StartEpicseven_Asia"
-        ]
-    },
-    "StartEpicseven_Asia": {
-        "enabled": false,
-        "action": "StartApp",
-        "package": "com.stove.epic7.google",
-        "post_wait_freezes": 10000,
-        "next": [
-            "ClosePop_up"
+            "StartEpicseven_cn"
         ]
     },
     "StartEpicseven_cn": {
-        "enabled": false,
         "action": "StartApp",
         "package": "com.zlongame.cn.epicseven",
         "post_wait_freezes": 10000,
@@ -50,7 +39,41 @@
         "post_wait_freezes": 1500,
         "next": [
             "邮件确认",
-            "友情界面轻触后关闭"
+            "重新进行"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "邮件确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            936,
+            628,
+            275,
+            71
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行"
+        ]
+    },
+    "重新进行": {
+        "recognition": "OCR",
+        "expected": "重新进行",
+        "roi": [
+            753,
+            544,
+            267,
+            82
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "重新进行",
+            "game_over"
         ]
     }
 }
