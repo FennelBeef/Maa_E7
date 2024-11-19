@@ -73,6 +73,15 @@
         "post_wait_freezes": 1500,
         "next": [
             "重新进行",
+            "轻触后关闭_主页"
+        ]
+    },
+    "轻触后关闭_主页": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "next": [
+            "轻触后关闭_主页",
             "game_over"
         ]
     }

@@ -7,7 +7,15 @@
             46,
             36
         ],
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                440,
+                83,
+                829,
+                558
+            ]
+        },
         "next": [
             "findUpperItems",
             "SwipeList"
@@ -16,10 +24,10 @@
     "findUpperItems": {
         "recognition": "OCR",
         "roi": [
-            676,
-            138,
-            196,
-            581
+            681,
+            77,
+            217,
+            572
         ],
         "expected": "誓约书签|神秘奖牌",
         "next": [
@@ -28,16 +36,18 @@
     },
     "findUpperItems_bug": {
         "recognition": "OCR",
+        "roi": "findUpperItems",
         "expected": "购买",
-        "action": "Click",
         "roi_offset": [
-            480,
-            25,
+            376,
             0,
-            0
+            60,
+            25
         ],
+        "action": "Click",
         "next": [
-            "buy"
+            "buy",
+            "refresh"
         ]
     },
     "SwipeList": {
@@ -57,32 +67,36 @@
         "next": [
             "findLowerItems",
             "refresh"
-        ]
+        ],
+        "post_delay": 200
     },
     "findLowerItems": {
         "recognition": "OCR",
         "expected": "誓约书签|神秘奖牌",
         "roi": [
-            668,
-            83,
-            220,
-            554
+            675,
+            130,
+            227,
+            578
         ],
-        "pre_wait_freezes": 1000,
         "next": "LowerItems_bug"
     },
     "LowerItems_bug": {
         "recognition": "OCR",
         "expected": "购买",
-        "action": "Click",
+        "roi": "findLowerItems",
         "roi_offset": [
-            480,
-            25,
+            376,
             0,
-            0
+            60,
+            25
         ],
+        "action": "Click",
         "pre_wait_freezes": 1000,
-        "next": "buy"
+        "next": [
+            "buy",
+            "refresh"
+        ]
     },
     "buy": {
         "recognition": "OCR",

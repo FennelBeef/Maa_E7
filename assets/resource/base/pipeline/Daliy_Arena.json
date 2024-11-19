@@ -66,6 +66,9 @@
             "Challenge",
             "ChooseOpponent_2",
             "Refresh_Arena"
+        ],
+        "interrupt": [
+            "竞技场_确认"
         ]
     },
     "ChooseOpponent_2": {

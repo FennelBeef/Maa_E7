@@ -24,26 +24,11 @@
         ],
         "post_wait_freezes": 1500,
         "next": [
-            "close_Sign_in_Bonus",
             "签到",
             "捐赠"
         ],
         "interrupt": [
             "轻触后关闭"
-        ]
-    },
-    "close_Sign_in_Bonus": {
-        "recognition": "OCR",
-        "expected": "轻触后关闭",
-        "action": "Click",
-        "roi": [
-            521,
-            482,
-            253,
-            114
-        ],
-        "next": [
-            "签到"
         ]
     },
     "签到": {
@@ -254,7 +239,7 @@
         ],
         "post_wait_freezes": 1000,
         "next": [
-            "返回骑士团"
+            "世界首领战_准备战斗"
         ]
     },
     "返回骑士团": {
@@ -359,14 +344,17 @@
         "next": [
             "资源支援_支援魔力龙兽脚爪",
             "捐赠"
+        ],
+        "interrupt": [
+            "轻触后关闭"
         ]
     },
     "资源支援_支援魔力龙兽脚爪": {
         "recognition": "OCR",
         "expected": "支援2个",
         "action": "Click",
-        "target": "资源支援_支援",
-        "target_offset": [
+        "roi": "资源支援_支援",
+        "roi_offset": [
             460,
             10,
             0,
