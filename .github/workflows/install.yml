@@ -109,11 +109,11 @@ jobs:
           python ./install.py ${{ needs.meta.outputs.tag }}
           cp ./MFA/MFAWPF.exe ./install
           # url项示例  https://github.com/SweetSmellFox/MFAWPF
-          jq --arg version_name "Maa_E7" --arg url ""https://github.com/FennelBeef/Maa_E7"" --arg version ${{ needs.meta.outputs.tag }} '. + {"name": $version_name, "url": $url,"version": $version}' ./assets/interface.json > ./install/interface.json
+          jq --arg version_name "MAA_E7" --arg url ""https://github.com/FennelBeef/Maa_E7"" --arg version ${{ needs.meta.outputs.tag }} '. + {"name": $version_name, "url": $url,"version": $version}' ./assets/interface.json > ./install/interface.json
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Maa_E7-win-${{ matrix.arch }}
+          name: MAA_E7-win-${{ matrix.arch }}
           path: "install"
 
   ubuntu:
@@ -145,7 +145,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Maa_E7-linux-${{ matrix.arch }}
+          name: MAA_E7-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -177,7 +177,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Maa_E7-macos-${{ matrix.arch }}
+          name: MAA_E7-macos-${{ matrix.arch }}
           path: "install"
 
   android:
@@ -210,7 +210,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Maa_E7-android-${{ matrix.arch }}
+          name: MAA_E7-android-${{ matrix.arch }}
           path: "install"
 
   release:

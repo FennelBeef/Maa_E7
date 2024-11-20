@@ -184,7 +184,7 @@
         ]
     },
     "切换boss_3": {
-        "enabled": true,
+        "enabled": false,
         "recognition": "TemplateMatch",
         "template": "Expedition\\boss_3.png",
         "roi": [

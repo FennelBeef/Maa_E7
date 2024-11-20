@@ -7,9 +7,11 @@
     "StartEpicseven_cn": {
         "action": "StartApp",
         "package": "com.zlongame.cn.epicseven",
-        "post_wait_freezes": 10000,
         "next": [
             "ClosePop_up"
+        ],
+        "interrupt": [
+            "wait"
         ]
     },
     "ClosePop_up": {
@@ -24,7 +26,13 @@
         "action": "Click",
         "next": [
             "轻触画面开始"
+        ],
+        "interrupt": [
+            "wait"
         ]
+    },
+    "wait": {
+        "post_delay": 1000
     },
     "轻触画面开始": {
         "recognition": "OCR",
@@ -73,7 +81,8 @@
         "post_wait_freezes": 1500,
         "next": [
             "重新进行",
-            "轻触后关闭_主页"
+            "轻触后关闭_主页",
+            "game_over"
         ]
     },
     "轻触后关闭_主页": {
