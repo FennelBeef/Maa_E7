@@ -1,0 +1,13 @@
+{
+    "识别并点击确认图标": {
+        "next": [
+            "我的自定义任务"
+        ]
+    },
+    "我的自定义任务": {
+        "recognition": "Custom",
+        "custom_recognition": "MyReco",
+        "action": "Custom",
+        "custom_action": "MyAct"
+    }
+}

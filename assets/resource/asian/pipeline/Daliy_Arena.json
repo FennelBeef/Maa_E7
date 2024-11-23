@@ -1,0 +1,177 @@
+{
+    "Initial_arena": {
+        "next": [
+            "ChooseOpponent_1",
+            "Menu_arena"
+        ],
+        "post_wait_freezes": 500,
+        "interrupt": [
+            "go_home"
+        ]
+    },
+    "Menu_arena": {
+        "action": "Click",
+        "target": [
+            1225,
+            17,
+            32,
+            35
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_arena"
+        ]
+    },
+    "Start_arena": {
+        "recognition": "OCR",
+        "expected": "竞技场",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Enter_Arena"
+        ]
+    },
+    "Enter_Arena": {
+        "recognition": "OCR",
+        "expected": "竞技场",
+        "action": "Click",
+        "roi": [
+            207,
+            84,
+            279,
+            133
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "ChooseOpponent_1"
+        ]
+    },
+    "ChooseOpponent_1": {
+        "recognition": "OCR",
+        "expected": "积分",
+        "roi": [
+            319,
+            180,
+            297,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "Challenge",
+            "ChooseOpponent_2",
+            "Refresh_Arena"
+        ],
+        "interrupt": [
+            "竞技场_确认"
+        ]
+    },
+    "ChooseOpponent_2": {
+        "recognition": "OCR",
+        "expected": "积分",
+        "roi": [
+            318,
+            307,
+            276,
+            86
+        ],
+        "action": "Click",
+        "next": [
+            "Challenge",
+            "ChooseOpponent_3"
+        ]
+    },
+    "ChooseOpponent_3": {
+        "recognition": "OCR",
+        "expected": "积分",
+        "roi": [
+            318,
+            430,
+            252,
+            93
+        ],
+        "action": "Click",
+        "next": [
+            "Challenge",
+            "ChooseOpponent_3",
+            "Refresh_Arena"
+        ]
+    },
+    "Refresh_Arena": {
+        "recognition": "TemplateMatch",
+        "template": "Arena\\刷新竞技场.png",
+        "action": "Click",
+        "roi": [
+            792,
+            89,
+            47,
+            51
+        ],
+        "next": [
+            "Confirm_refresh"
+        ]
+    },
+    "Confirm_refresh": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            377,
+            179,
+            516,
+            376
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "ChooseOpponent_1"
+        ]
+    },
+    "Challenge": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "action": "Click",
+        "roi": [
+            607,
+            638,
+            66,
+            44
+        ],
+        "next": [
+            "Quick_Battle"
+        ]
+    },
+    "Quick_Battle": {
+        "recognition": "OCR",
+        "expected": "快速对战",
+        "action": "Click",
+        "roi": [
+            653,
+            604,
+            346,
+            109
+        ],
+        "post_wait_freezes": 3000,
+        "post_delay": 1000,
+        "next": [
+            "Finish_Battle"
+        ]
+    },
+    "Finish_Battle": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            410,
+            563,
+            476,
+            110
+        ],
+        "post_wait_freezes": 3000,
+        "next": []
+    }
+}

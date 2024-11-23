@@ -1,0 +1,85 @@
+{
+    "Menu_pet": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_pet"
+        ]
+    },
+    "Start_pet": {
+        "recognition": "OCR",
+        "expected": "宠物小屋",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "next": [
+            "get_pet"
+        ]
+    },
+    "get_pet": {
+        "recognition": "OCR",
+        "expected": "领养",
+        "action": "Click",
+        "roi": [
+            557,
+            618,
+            713,
+            84
+        ],
+        "next": [
+            "get_free_pet"
+        ]
+    },
+    "get_free_pet": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "roi": [
+            363,
+            565,
+            554,
+            88
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "reback_pet_1"
+        ]
+    },
+    "reback_pet_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            566,
+            660,
+            169,
+            56
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "reback_pet_2"
+        ]
+    },
+    "reback_pet_2": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            566,
+            660,
+            169,
+            56
+        ],
+        "next": []
+    }
+}

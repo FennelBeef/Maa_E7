@@ -1,0 +1,179 @@
+{
+    "Menu_rewards": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_rewards"
+        ]
+    },
+    "Start_rewards": {
+        "recognition": "OCR",
+        "expected": "成就",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "三姐妹日记奖励"
+        ]
+    },
+    "三姐妹日记奖励": {
+        "action": "Click",
+        "target": [
+            437,
+            158,
+            51,
+            50
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "close_三姐妹日记奖励",
+            "记忆之根管理院",
+            "game_over"
+        ]
+    },
+    "close_三姐妹日记奖励": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            552,
+            538,
+            177,
+            92
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "记忆之根管理院"
+        ]
+    },
+    "记忆之根管理院": {
+        "recognition": "OCR",
+        "expected": "记忆之根管理院",
+        "roi": [
+            969,
+            64,
+            310,
+            655
+        ],
+        "action": "Click",
+        "next": [
+            "领取记忆之根管理院奖励"
+        ]
+    },
+    "领取记忆之根管理院奖励": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            743,
+            75,
+            195,
+            49
+        ],
+        "action": "Click",
+        "next": [
+            "元老院"
+        ],
+        "interrupt": [
+            "奖励_轻触后关闭"
+        ]
+    },
+    "元老院": {
+        "recognition": "OCR",
+        "expected": "元老院",
+        "roi": [
+            969,
+            64,
+            310,
+            655
+        ],
+        "action": "Click",
+        "next": [
+            "领取元老院奖励"
+        ]
+    },
+    "领取元老院奖励": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            743,
+            75,
+            195,
+            49
+        ],
+        "action": "Click",
+        "next": [
+            "商人联盟"
+        ],
+        "interrupt": [
+            "奖励_轻触后关闭"
+        ]
+    },
+    "商人联盟": {
+        "recognition": "OCR",
+        "expected": "商人联盟",
+        "roi": [
+            969,
+            64,
+            310,
+            655
+        ],
+        "action": "Click",
+        "next": [
+            "领取商人联盟奖励"
+        ]
+    },
+    "领取商人联盟奖励": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            743,
+            75,
+            195,
+            49
+        ],
+        "action": "Click",
+        "next": [
+            "特务幻影队"
+        ],
+        "interrupt": [
+            "奖励_轻触后关闭"
+        ]
+    },
+    "特务幻影队": {
+        "recognition": "OCR",
+        "expected": "特务幻影队",
+        "roi": [
+            969,
+            64,
+            310,
+            655
+        ],
+        "action": "Click",
+        "next": [
+            "领取特务幻影队奖励"
+        ]
+    },
+    "领取特务幻影队奖励": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            743,
+            75,
+            195,
+            49
+        ],
+        "action": "Click",
+        "next": []
+    }
+}

@@ -1,0 +1,512 @@
+{
+    "Menu_order": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_order"
+        ]
+    },
+    "Start_order": {
+        "recognition": "OCR",
+        "expected": "骑士团",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "签到",
+            "捐赠"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "签到": {
+        "recognition": "OCR",
+        "expected": "签到达成率",
+        "action": "Click",
+        "roi": [
+            788,
+            627,
+            188,
+            74
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "关闭签到达成率",
+            "骑士团出征"
+        ]
+    },
+    "关闭签到达成率": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "骑士团出征"
+        ]
+    },
+    "骑士团出征": {
+        "recognition": "OCR",
+        "expected": "骑士团出征",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战"
+        ]
+    },
+    "世界首领战": {
+        "recognition": "OCR",
+        "expected": "世界首领战",
+        "action": "Click",
+        "roi": [
+            259,
+            147,
+            723,
+            478
+        ],
+        "post_delay": 500,
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_准备战斗"
+        ]
+    },
+    "世界首领战_准备战斗": {
+        "recognition": "OCR",
+        "expected": "准备战斗",
+        "action": "Click",
+        "roi": [
+            584,
+            621,
+            452,
+            80
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_选择队伍"
+        ]
+    },
+    "世界首领战_选择队伍": {
+        "recognition": "OCR",
+        "expected": "选择队伍",
+        "action": "Click",
+        "roi": [
+            851,
+            565,
+            296,
+            89
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_组成战斗队伍",
+            "点击空白"
+        ]
+    },
+    "点击空白": {
+        "action": "Click",
+        "roi": [
+            31,
+            225,
+            55,
+            133
+        ],
+        "next": [
+            "返回骑士团"
+        ]
+    },
+    "世界首领战_组成战斗队伍": {
+        "recognition": "OCR",
+        "expected": "组成战斗队伍",
+        "action": "Click",
+        "roi": [
+            940,
+            615,
+            339,
+            85
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_自动配置"
+        ]
+    },
+    "世界首领战_自动配置": {
+        "recognition": "OCR",
+        "expected": "自动配置",
+        "action": "Click",
+        "roi": [
+            15,
+            611,
+            994,
+            91
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "世界首领战_战斗开始"
+        ]
+    },
+    "世界首领战_战斗开始": {
+        "recognition": "OCR",
+        "expected": "战斗开始",
+        "action": "Click",
+        "roi": [
+            15,
+            611,
+            994,
+            91
+        ],
+        "post_delay": 10000,
+        "next": [
+            "世界首领战_跳过"
+        ]
+    },
+    "世界首领战_跳过": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "action": "Click",
+        "roi": [
+            1026,
+            3,
+            248,
+            63
+        ],
+        "post_delay": 9000,
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_全部开启"
+        ]
+    },
+    "世界首领战_全部开启": {
+        "recognition": "OCR",
+        "expected": "全部开启",
+        "action": "Click",
+        "roi": [
+            488,
+            574,
+            302,
+            106
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_全部开启_确认"
+        ]
+    },
+    "世界首领战_全部开启_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            488,
+            574,
+            302,
+            106
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_确认"
+        ]
+    },
+    "世界首领战_确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            921,
+            615,
+            344,
+            90
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "世界首领战_准备战斗"
+        ]
+    },
+    "返回骑士团": {
+        "recognition": "OCR",
+        "expected": "世界首领战",
+        "action": "Click",
+        "roi": [
+            5,
+            0,
+            215,
+            63
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "资源支援"
+        ]
+    },
+    "资源支援": {
+        "recognition": "OCR",
+        "expected": "资源支援",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "资源支援_请求支援"
+        ]
+    },
+    "资源支援_请求支援": {
+        "recognition": "OCR",
+        "expected": "请求支援",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            764,
+            69,
+            229,
+            65
+        ],
+        "next": [
+            "资源支援_请求支援_制作材料",
+            "资源支援_支援"
+        ]
+    },
+    "资源支援_请求支援_制作材料": {
+        "recognition": "OCR",
+        "expected": "制作材料",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            146,
+            124,
+            639,
+            70
+        ],
+        "next": [
+            "资源支援_请求支援_制作材料_魔力龙兽脚爪"
+        ]
+    },
+    "资源支援_请求支援_制作材料_魔力龙兽脚爪": {
+        "recognition": "TemplateMatch",
+        "template": "骑士团\\魔力龙兽脚爪.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "roi": [
+            138,
+            194,
+            999,
+            345
+        ],
+        "next": [
+            "资源支援_请求支援_请求支援"
+        ]
+    },
+    "资源支援_请求支援_请求支援": {
+        "recognition": "OCR",
+        "expected": "请求支援",
+        "action": "Click",
+        "roi": [
+            873,
+            540,
+            281,
+            113
+        ],
+        "next": [
+            "资源支援_支援"
+        ]
+    },
+    "资源支援_支援": {
+        "recognition": "OCR",
+        "expected": "魔力龙兽脚爪",
+        "roi": [
+            251,
+            251,
+            742,
+            461
+        ],
+        "next": [
+            "资源支援_支援魔力龙兽脚爪",
+            "捐赠"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "资源支援_支援魔力龙兽脚爪": {
+        "recognition": "OCR",
+        "expected": "支援2个",
+        "action": "Click",
+        "roi": "资源支援_支援",
+        "roi_offset": [
+            460,
+            10,
+            0,
+            10
+        ],
+        "next": [
+            "资源支援_支援"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "捐赠": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            1005,
+            67,
+            270,
+            649
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "donate",
+            "courage",
+            "game_over"
+        ]
+    },
+    "donate": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            784,
+            397,
+            199,
+            83
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "close_donate",
+            "game_over"
+        ]
+    },
+    "close_donate": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": [
+            "courage"
+        ]
+    },
+    "courage": {
+        "recognition": "OCR",
+        "expected": "捐赠",
+        "action": "Click",
+        "roi": [
+            779,
+            622,
+            204,
+            76
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "close_courage",
+            "game_over"
+        ]
+    },
+    "close_courage": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            521,
+            482,
+            253,
+            114
+        ],
+        "next": []
+    },
+    "团员商店": {
+        "recognition": "OCR",
+        "expected": "团员商店",
+        "action": "Click",
+        "roi": [
+            1004,
+            64,
+            275,
+            655
+        ],
+        "post_wait_freezes": 1000,
+        "next": [
+            "团员商店_物品"
+        ],
+        "interrupt": [
+            "Swipe_团员商店"
+        ]
+    },
+    "团员商店_物品": {
+        "recognition": "OCR",
+        "expected": "魔罗戈拉|装备炼制石箱",
+        "roi": [
+            425,
+            96,
+            276,
+            468
+        ],
+        "next": [
+            "团员商店_物品_购买"
+        ]
+    },
+    "团员商店_物品_购买": {
+        "recognition": "OCR",
+        "roi": "团员商店_物品",
+        "roi_offset": [
+            378,
+            22,
+            71,
+            17
+        ],
+        "expected": "购买",
+        "action": "Click",
+        "next": [
+            "团员商店_物品"
+        ],
+        "interrupt": [
+            "购买团员商店物品",
+            "Swipe_团员商店"
+        ]
+    },
+    "Swipe_团员商店": {
+        "action": "Swipe",
+        "begin": [
+            326,
+            706,
+            1,
+            1
+        ],
+        "end": [
+            326,
+            68,
+            1,
+            1
+        ],
+        "duration": 2000,
+        "next": []
+    }
+}

@@ -21,11 +21,11 @@
         "recognition": "OCR",
         "expected": "轻触画面开始",
         "action": "Click",
-        "target": [
-            491,
-            479,
-            343,
-            129
+        "roi": [
+            569,
+            582,
+            142,
+            44
         ],
         "post_wait_freezes": 1500,
         "next": [

@@ -1,0 +1,232 @@
+{
+    "Menu_Sanctuary": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_Sanctuary"
+        ]
+    },
+    "Start_Sanctuary": {
+        "recognition": "OCR",
+        "expected": "圣域",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Heart_of_Elysium"
+        ]
+    },
+    "Heart_of_Elysium": {
+        "recognition": "OCR",
+        "expected": "欧勒毕斯之心",
+        "action": "Click",
+        "roi": [
+            556,
+            167,
+            187,
+            278
+        ],
+        "next": [
+            "get_sky_stone"
+        ]
+    },
+    "get_sky_stone": {
+        "recognition": "OCR",
+        "expected": "领取生产的奖励",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "reback_Heart_of_Elysium_1",
+            "reback_Heart_of_Elysium_2"
+        ]
+    },
+    "reback_Heart_of_Elysium_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            526,
+            467,
+            240,
+            132
+        ],
+        "next": [
+            "reback_Heart_of_Elysium_2"
+        ]
+    },
+    "reback_Heart_of_Elysium_2": {
+        "recognition": "OCR",
+        "expected": "欧勒毕斯之心",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            244,
+            75
+        ],
+        "post_delay": 200,
+        "next": [
+            "Elven_Forest"
+        ]
+    },
+    "Elven_Forest": {
+        "recognition": "OCR",
+        "expected": "精灵之森",
+        "action": "Click",
+        "roi": [
+            252,
+            183,
+            210,
+            159
+        ],
+        "next": [
+            "get_Penguin"
+        ]
+    },
+    "get_Penguin": {
+        "recognition": "OCR",
+        "expected": "企鹅巢穴",
+        "action": "Click",
+        "roi": [
+            510,
+            342,
+            108,
+            63
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "reback_Penguin_1",
+            "reback_Penguin_2"
+        ]
+    },
+    "reback_Penguin_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            551,
+            503,
+            172,
+            84
+        ],
+        "next": [
+            "Elven_Spring"
+        ]
+    },
+    "reback_Penguin_2": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            575,
+            669,
+            139,
+            41
+        ],
+        "next": [
+            "Elven_Spring"
+        ]
+    },
+    "Elven_Spring": {
+        "recognition": "OCR",
+        "expected": "精灵之泉",
+        "action": "Click",
+        "roi": [
+            918,
+            345,
+            208,
+            130
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "reback_spring_1",
+            "reback_spring_2"
+        ]
+    },
+    "reback_spring_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            551,
+            503,
+            172,
+            84
+        ],
+        "next": [
+            "萝卜"
+        ]
+    },
+    "reback_spring_2": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            575,
+            669,
+            139,
+            41
+        ],
+        "next": [
+            "萝卜"
+        ]
+    },
+    "萝卜": {
+        "recognition": "OCR",
+        "expected": "魔罗戈拉种植地",
+        "action": "Click",
+        "roi": [
+            669,
+            600,
+            174,
+            68
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "reback_萝卜_1",
+            "reback_萝卜_2",
+            "game_over"
+        ]
+    },
+    "reback_萝卜_1": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            575,
+            669,
+            139,
+            41
+        ],
+        "next": []
+    },
+    "reback_萝卜_2": {
+        "recognition": "OCR",
+        "expected": "轻触后关闭",
+        "action": "Click",
+        "roi": [
+            575,
+            669,
+            139,
+            41
+        ],
+        "next": []
+    }
+}

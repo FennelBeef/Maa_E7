@@ -1,0 +1,349 @@
+{
+    "Expedition": {
+        "next": [
+            "识别BOSS",
+            "Menu_Fight"
+        ]
+    },
+    "识别BOSS": {
+        "recognition": "OCR",
+        "expected": [
+            ""
+        ],
+        "roi": [
+            107,
+            398,
+            331,
+            42
+        ],
+        "next": [
+            "公开招募"
+        ]
+    },
+    "Menu_Fight": {
+        "action": "Click",
+        "target": [
+            1224,
+            16,
+            34,
+            34
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "Start_Fight"
+        ]
+    },
+    "Start_Fight": {
+        "recognition": "OCR",
+        "expected": "战斗",
+        "action": "Click",
+        "roi": [
+            939,
+            67,
+            340,
+            646
+        ],
+        "post_wait_freezes": 1500,
+        "next": [
+            "Start_Expedition"
+        ],
+        "interrupt": [
+            "SwipeList_Fight"
+        ]
+    },
+    "SwipeList_Fight": {
+        "action": "Swipe",
+        "begin": [
+            1179,
+            346,
+            1,
+            1
+        ],
+        "end": [
+            78,
+            351,
+            1,
+            1
+        ],
+        "next": []
+    },
+    "Start_Expedition": {
+        "recognition": "OCR",
+        "expected": "远征队",
+        "roi": [
+            35,
+            58,
+            1224,
+            206
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "进入远征队"
+        ]
+    },
+    "进入远征队": {
+        "recognition": "OCR",
+        "expected": "进入远征队",
+        "roi": [
+            719,
+            608,
+            243,
+            103
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "蓝色古木里奇",
+            "痛苦的追随者莫洛伊",
+            "史托玛库斯"
+        ],
+        "interrupt": [
+            "轻触后关闭"
+        ]
+    },
+    "蓝色古木里奇": {
+        "enabled": false,
+        "recognition": "OCR",
+        "expected": "蓝色古木里奇",
+        "roi": [
+            290,
+            141,
+            315,
+            167
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "公开招募"
+        ]
+    },
+    "痛苦的追随者莫洛伊": {
+        "enabled": false,
+        "recognition": "OCR",
+        "expected": "痛苦的追随者莫洛伊",
+        "roi": [
+            793,
+            134,
+            301,
+            185
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "公开招募"
+        ]
+    },
+    "史托玛库斯": {
+        "enabled": false,
+        "recognition": "OCR",
+        "expected": "史托玛库斯",
+        "roi": [
+            637,
+            449,
+            304,
+            163
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1500,
+        "next": [
+            "公开招募"
+        ]
+    },
+    "公开招募": {
+        "pre_delay": 1000,
+        "recognition": "OCR",
+        "expected": "公开招募",
+        "roi": [
+            765,
+            123,
+            274,
+            76
+        ],
+        "action": "Click",
+        "next": [
+            "重新整理"
+        ]
+    },
+    "重新整理": {
+        "recognition": "OCR",
+        "expected": "重新整理",
+        "action": "Click",
+        "roi": [
+            842,
+            197,
+            423,
+            55
+        ],
+        "post_delay": 2000,
+        "next": [
+            "切换boss_3",
+            "切换boss_2",
+            "切换boss_1",
+            "game_over"
+        ]
+    },
+    "切换boss_3": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_3.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
+        ]
+    },
+    "切换boss_2": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_2.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
+        ]
+    },
+    "切换boss_1": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\boss_1.png",
+        "roi": [
+            575,
+            195,
+            296,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "入场"
+        ]
+    },
+    "入场": {
+        "recognition": "OCR",
+        "expected": "入场",
+        "roi": [
+            1088,
+            254,
+            186,
+            462
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "准备战斗"
+        ]
+    },
+    "准备战斗": {
+        "recognition": "OCR",
+        "expected": "准备战斗",
+        "action": "Click",
+        "roi": [
+            1030,
+            626,
+            218,
+            66
+        ],
+        "next": [
+            "战斗开始"
+        ]
+    },
+    "战斗开始": {
+        "recognition": "OCR",
+        "roi": [
+            909,
+            597,
+            362,
+            109
+        ],
+        "expected": "战斗开始",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "暂停战斗"
+        ]
+    },
+    "暂停战斗": {
+        "recognition": "TemplateMatch",
+        "template": "Expedition\\暂停游戏.png",
+        "pre_delay": 200,
+        "roi": [
+            1213,
+            0,
+            65,
+            61
+        ],
+        "action": "Click",
+        "next": [
+            "放弃战斗"
+        ]
+    },
+    "放弃战斗": {
+        "recognition": "OCR",
+        "expected": "放弃战斗",
+        "action": "Click",
+        "roi": [
+            489,
+            155,
+            309,
+            402
+        ],
+        "next": [
+            "结束"
+        ]
+    },
+    "结束": {
+        "recognition": "OCR",
+        "expected": "结束",
+        "action": "Click",
+        "roi": [
+            397,
+            381,
+            499,
+            123
+        ],
+        "post_wait_freezes": 1000,
+        "post_delay": 500,
+        "next": [
+            "确认"
+        ]
+    },
+    "确认": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "action": "Click",
+        "roi": [
+            1077,
+            610,
+            196,
+            102
+        ],
+        "pre_delay": 500,
+        "post_wait_freezes": 500,
+        "next": [
+            "返回远征队"
+        ]
+    },
+    "返回远征队": {
+        "recognition": "OCR",
+        "expected": "远征队",
+        "action": "Click",
+        "roi": [
+            5,
+            0,
+            283,
+            72
+        ],
+        "post_delay": 1000,
+        "next": []
+    }
+}
